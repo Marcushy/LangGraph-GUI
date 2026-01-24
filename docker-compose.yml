@@ -6,6 +6,8 @@ services:
       - "127.0.0.1:3000:3000"
     volumes:
       - ./frontend/src/:/app/src/
+      - ./frontend/node_modules/:/app/node_modules/
+      - ./frontend/.svelte-kit/:/app/.svelte-kit/
     networks:
       - shared-network
     command: npm run dev
